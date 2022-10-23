@@ -46,18 +46,20 @@ function conditions(player, computer) {
 
 console.log("Rock - 0; Paper - 1; Scissors - 2");
 
-let computer = getComputerChoice();
-let player = defineUserInput();
-
-console.log(`Player - ${player}`);
-console.log(`Computer - ${computer}`);
-
-if (conditions(player, computer) == 2) {
-	console.log("Tie!");
-}
-else if (conditions(player, computer) == 1) {
-	console.log("Win!");
-}
-else if (conditions(player, computer) == 0) {
-	console.log("Lose!");
+for (i = 0; i < 5; i++) {
+	let computer = getComputerChoice();
+	let player = defineUserInput();
+	console.log(`Player - ${player}; Computer - ${computer}`);
+	if (conditions(player, computer) == 2) {
+		alert("Tie!");
+		console.log("Tie!");
+	}
+	else if (conditions(player, computer) == 1) {
+		alert("Win!");
+		console.log("Win!");
+	}
+	else if (conditions(player, computer) == 0) {
+		alert("Lose!");
+		console.log("Lose!");
+	}
 }
