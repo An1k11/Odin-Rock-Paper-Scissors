@@ -46,20 +46,28 @@ function conditions(player, computer) {
 
 console.log("Rock - 0; Paper - 1; Scissors - 2");
 
-for (i = 0; i < 5; i++) {
+let playercounter = 0;
+let computercounter = 0;
+
+do {
 	let computer = getComputerChoice();
 	let player = defineUserInput();
 	console.log(`Player - ${player}; Computer - ${computer}`);
 	if (conditions(player, computer) == 2) {
-		alert("Tie!");
+		alert(`Tie!\nYour points - ${playercounter}\nComputer points - ${computercounter}`);
 		console.log("Tie!");
 	}
 	else if (conditions(player, computer) == 1) {
-		alert("Win!");
+		playercounter += 1;
+		alert(`Win!\nYour points - ${playercounter}\nComputer points - ${computercounter}`)
 		console.log("Win!");
 	}
 	else if (conditions(player, computer) == 0) {
-		alert("Lose!");
+		computercounter += 1;
+		alert(`Lose!\nYour points - ${playercounter}\nComputer points - ${computercounter}`);
 		console.log("Lose!");
 	}
-}
+} while (playercounter < 3 && computercounter < 3)
+
+playercounter == 3 ? alert("Congrats!!! You won whole battle.") : 
+	alert("You lost yout battle! Try your luck next time.")
