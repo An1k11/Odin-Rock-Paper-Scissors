@@ -1,3 +1,4 @@
+/*
 function getComputerChoice() {
 	let max = 3;
 	return Math.floor(Math.random() * max);
@@ -71,3 +72,27 @@ do {
 
 playercounter == 3 ? alert("Congrats!!! You won whole battle.") : 
 	alert("You lost yout battle! Try your luck next time.")
+*/
+
+function getComputerChoice() {
+	let max = 3;
+	return Math.floor(Math.random() * max);
+}
+
+const specs = document.querySelectorAll('img');
+
+specs.forEach(spec => spec.addEventListener('click', () => {
+	//console.log(spec);
+	if (spec.classList.contains('rock')) {
+		let playerChoice = 0;
+		console.log(playerChoice);
+	}
+	else if (spec.classList.contains('paper')) {
+		let playerChoice = 1;
+		console.log(playerChoice);
+	}
+	else if (spec.classList.contains('scissors')) {
+		let playerChoice = 2;
+		console.log(playerChoice);
+	}
+}))

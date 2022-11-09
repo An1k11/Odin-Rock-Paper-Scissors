@@ -1,0 +1,92 @@
+
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	height: 250px;
+	width: 250px;
+	transition: 0.07s;
+	margin: 2px;
+	border: 2px solid white;
+}
+
+img:hover {
+	border: 2px solid grey;
+}
+
+.header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 70px;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0.25;
+}
+
+.play-button {
+	font-size: 30px;
+	background-color: rgb(183, 183, 183);
+	padding: 10px 30px;
+	border-radius: 10px;
+	transition: 0.08s;
+	border: 2px solid black;
+}
+
+.play-button:hover {
+	background-color: rgb(128, 128, 128);
+}
+
+.play-button:active {
+	background-color: rgba(128, 128, 128, 0.7);
+}
+
+.score-container {
+	display: flex;
+	flex-direction: column;
+	flex: 0.5;
+}
+
+.text-container {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.points-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.player-points,
+.computer-points,
+.player-rounds,
+.computer-rounds {
+	font-size: 40px;
+}
+
+.player-Y,
+.player-C,
+.rounds-C,
+.rounds-Y {
+	font-size: 36px;
+}
+
+.winner-container {
+	height: 100px;
+}
+
+.img-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+
